@@ -1,0 +1,25 @@
+Instalação
+
+    - Versão do create-single-spa em modo global
+    npm install -g create-single-spa@4.1.6
+
+    - Criar um módulo
+    npx create-single-spa
+
+    - Ativar o servidor
+    npx run start
+
+    - Inserir importações para o reconhecimento do react
+    
+    "react": "https://unpkg.com/react@18/umd/react.development.js",
+    "react-dom": "https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+
+    - Ao criar um novo módulo, acesse o seu:
+            packpage.json
+                    scripts
+                        start -> insira uma porta para o servidor, exemplo: --port 8080
+
+        ==> Também é necessário inserir na importação (no root) o link para acesso com o servidor informado, juntamente com o 
+        nome do módulo criado
+
+            Exemplo: "@mfe/react": "//localhost:8080/mfe-react.js",
